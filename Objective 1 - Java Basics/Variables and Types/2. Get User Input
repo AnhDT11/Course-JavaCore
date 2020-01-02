@@ -1,0 +1,11 @@
+# Input
+
+### Mục tiêu
+Sinh viên hiểu cách sử dụng Scanner để nhận dữ liệu nhập từ người dùng.
+
+### Tổng quan
+Lớp Scanner được sử dụng để nhận thông tin từ người dùng nhập vào, và nó được tìm thấy trong gói java.util.
+
+Chúng ta sẽ thảo luận thêm về lớp và đối tượng sau.
+
+Để sử dụng lớp Scanner, hãy tạo một đối tượng của lớp và sử dụng bất kỳ phương thức có sẵn nào trong lớp Scanner. Trong ví dụ của chúng tôi, chúng ta sẽ sử dụng phương thức nextInt (), được sử dụng để đọc các số nguyên:
