@@ -1,5 +1,7 @@
 # So sánh mạnh mẽ với Lambda
 
+<br />
+
 Trong hướng dẫn này, chúng ta sẽ nói về những hỗ trợ của Lambda trong Java 8 - đặc biệt là cách tận dụng nó để viết `Comparator` và sắp xếp một `Collection`.
 
 Đầu tiên, chúng ta tạo một đối tượng sẽ sử dụng trong bài viết:
@@ -20,6 +22,8 @@ public class Human {
 }
 ```
 
+<br />
+
 ## 1. Sort cơ bản không sử dụng Lambda
 
 Trước Java 8, để sắp xếp một Collection sẽ liên quan đến việc tạo một lớp bên trong vô danh cho `Comparator` được sử dụng trong sắp xếp:
@@ -35,6 +39,8 @@ Collections.sort(humans, new Comparator<Human>() {
     }
 });
 ```
+
+<br />
 
 ## 2. Sort cơ bản sử dụng Lambda
 
@@ -52,6 +58,8 @@ Chúng ta có thể đơn giản hóa hơn nữa biểu thức bằng cách khô
 ```java
 humans.sort((h1, h2) -> h1.getName().compareTo(h2.getName()));
 ```
+
+<br />
 
 ## 3. Sort sử dụng Reference to Static Method
 
@@ -79,6 +87,8 @@ humans.sort(Human::compareByNameThenAge);
 ```
 
 References: [Method references](../../../../blob/master/Java%208/4.%20Method%20References.md)
+
+<br />
 
 ## 4. Sort Extracted Comparators
 
@@ -183,6 +193,8 @@ List<Integer> items = new ArrayList<>();
     items.sort(Comparator.comparingInt(o -> o));
 ```
 Tương tự chúng ta cũng có `comparingLong()`, `comparingDouble()`.
+
+<br />
 
 ## 5. Sort với nhiều tiêu chí
 
